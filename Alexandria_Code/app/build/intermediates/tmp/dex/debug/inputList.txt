@@ -1,0 +1,8 @@
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\coverage-instrumented-classes\debug
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-d16304fe3e38e1cb7498257c7dab02941ac3f8a9.jar
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\classes-a80a1d3812a2e17c2fc454b563cf824131aae9de.jar
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\jacocoagent-8cf2f6bad74bd6e01acb45669efbc48e0f88da0a.jar
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-cbe4d5ad19c3557edf4e8632a2e19583958beb2b.jar
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\classes-fef4134d212387c4e1978fdd347f5abc6559533f.jar
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\core-3.2.0-e30991a02bd857fa2a5f723cf8bb147298b576c8.jar
+M:\Dev\AndroidStudioProjects\super-duo\Alexandria_Code\app\build\intermediates\pre-dexed\debug\classes-be1995d6625c1eef391e72ccd1325366d7363813.jar
