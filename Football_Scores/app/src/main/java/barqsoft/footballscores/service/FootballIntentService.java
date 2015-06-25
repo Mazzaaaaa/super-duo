@@ -28,19 +28,18 @@ import barqsoft.footballscores.R;
 /**
  * Created by yehya khaled on 3/2/2015.
  */
-public class myFetchService extends IntentService {
-    public static final String LOG_TAG = "myFetchService";
+public class FootballIntentService extends IntentService {
+    public static final String LOG_TAG = "FootballIntentService";
+    public static final String ACTION_UPDATE_VIEWS = "UPDATE_VIEWS";
 
-    public myFetchService() {
-        super("myFetchService");
+    public FootballIntentService() {
+        super("FootballIntentService");
     }
 
     @Override
     protected void onHandleIntent(Intent intent) {
         getData("n2");
         getData("p2");
-
-        return;
     }
 
     private void getData(String timeFrame) {
@@ -216,15 +215,6 @@ public class myFetchService extends IntentService {
                     match_values.put(DatabaseContract.scores_table.AWAY_GOALS_COL, Away_goals);
                     match_values.put(DatabaseContract.scores_table.LEAGUE_COL, League);
                     match_values.put(DatabaseContract.scores_table.MATCH_DAY, match_day);
-                    //log spam
-
-                    //Log.v(LOG_TAG,match_id);
-                    //Log.v(LOG_TAG,mDate);
-                    //Log.v(LOG_TAG,mTime);
-                    //Log.v(LOG_TAG,Home);
-                    //Log.v(LOG_TAG,Away);
-                    //Log.v(LOG_TAG,Home_goals);
-                    //Log.v(LOG_TAG,Away_goals);
 
                     values.add(match_values);
                 }
@@ -232,10 +222,13 @@ public class myFetchService extends IntentService {
             int inserted_data = 0;
             ContentValues[] insert_data = new ContentValues[values.size()];
             values.toArray(insert_data);
-            inserted_data = mContext.getContentResolver().bulkInsert(
-                    DatabaseContract.BASE_CONTENT_URI, insert_data);
-
-            //Log.v(LOG_TAG,"Succesfully Inserted : " + String.valueOf(inserted_data));
+            inserted_data = mContext.getContentResolver().
+                    bulkInsert(DatabaseContract.BASE_CONTENT_URI, insert_data);
+            /*
+            * Mazzarolo Matteo
+            * Use the ACTION_UPDATE_VIEWS intent to update all the widgets
+            */
+            sendBroadcast(new Intent(ACTION_UPDATE_VIEWS));
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage());
         }
