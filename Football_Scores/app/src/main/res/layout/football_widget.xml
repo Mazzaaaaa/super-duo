@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/widget"
     android:layout_width="match_parent"
@@ -21,15 +20,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:contentDescription="@string/cd_home"
             android:gravity="center"
-            android:textColor="@color/primary_dark_material_light"
-            tools:text="HOME" />
+            android:text="@string/widget_home"
+            android:textColor="@color/primary_dark_material_light" />
 
         <TextView
             android:id="@+id/widget_home_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:contentDescription="@string/cd_home_text"
             android:gravity="center"
             android:textColor="@color/primary_material_dark"
             android:textSize="@dimen/widget_team"
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:contentDescription="@string/cd_home" />
+            android:contentDescription="@string/cd_home_img" />
 
     </LinearLayout>
 
@@ -51,7 +52,8 @@
         android:layout_weight="1"
         android:gravity="center"
         android:textColor="@color/primary_material_dark"
-        android:textSize="@dimen/Score" />
+        android:textSize="@dimen/Score"
+        android:contentDescription="@string/cd_score" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -63,15 +65,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:contentDescription="@string/cd_away"
             android:gravity="center"
-            android:textColor="@color/primary_dark_material_light"
-            tools:text="AWAY" />
+            android:text="@string/widget_away"
+            android:textColor="@color/primary_dark_material_light" />
 
         <TextView
             android:id="@+id/widget_away_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:contentDescription="@string/cd_away_text"
             android:gravity="center"
             android:textColor="@color/primary_material_dark"
             android:textSize="@dimen/widget_team"
@@ -82,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:contentDescription="@string/cd_away" />
+            android:contentDescription="@string/cd_away_img" />
 
     </LinearLayout>
 

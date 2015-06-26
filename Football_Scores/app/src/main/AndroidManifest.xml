@@ -40,7 +40,7 @@
 
         <receiver
             android:name="FootballWidgetProvider"
-            android:label="@string/title_widget">
+            android:label="@string/widget_title">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="UPDATE_VIEWS" />

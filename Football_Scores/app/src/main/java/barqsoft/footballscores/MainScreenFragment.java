@@ -23,9 +23,6 @@ public class MainScreenFragment extends Fragment implements LoaderManager.Loader
     public static final int SCORES_LOADER = 0;
     private String[] fragmentdate = new String[1];
 
-    public MainScreenFragment() {
-    }
-
     private void update_scores() {
         Intent service_start = new Intent(getActivity(), FootballIntentService.class);
         getActivity().startService(service_start);
