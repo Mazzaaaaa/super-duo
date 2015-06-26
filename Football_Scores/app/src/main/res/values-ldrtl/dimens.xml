@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Fix for the Samsung LTR/RTL issue in DetailFragment
+https://code.google.com/p/android/issues/detail?id=60055 -->
+<resources>
+    <dimen name="sharePaddingRight">@dimen/sharePaddingStart</dimen>
+    <dimen name="sharePaddingLeft">@dimen/sharePaddingEnd</dimen>
+</resources>

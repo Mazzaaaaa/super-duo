@@ -39,6 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
+        <!--Adding PaddingStart to this button generates this issue:
+        https://code.google.com/p/android/issues/detail?id=60055
+        Fixed with this workaround:
+        https://gist.github.com/imminent/858a47904786aa2f4360
+        (This shouldn't be a problem though, because the r/l padding is the same here) -->
         <Button
             android:id="@+id/share_button"
             android:layout_width="match_parent"
@@ -47,8 +52,8 @@
             android:drawableLeft="@android:drawable/ic_menu_share"
             android:drawableStart="@android:drawable/ic_menu_share"
             android:gravity="center"
-            android:paddingLeft="120dp"
-            android:paddingRight="120dp"
+            android:paddingLeft="@dimen/sharePaddingLeft"
+            android:paddingRight="@dimen/sharePaddingRight"
             android:text="@string/share_text"
             android:contentDescription="@string/cd_share" />
     </FrameLayout>
