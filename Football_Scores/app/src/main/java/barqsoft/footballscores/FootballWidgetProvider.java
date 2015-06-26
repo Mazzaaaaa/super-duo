@@ -81,7 +81,7 @@ public class FootballWidgetProvider extends AppWidgetProvider {
 
             String home = cursor.getString(ScoresViewAdapter.COL_HOME);
             String away = cursor.getString(ScoresViewAdapter.COL_AWAY);
-            String score = Utilies.getScores(cursor.getInt(ScoresViewAdapter.COL_HOME_GOALS),
+            String score = Utilies.getScores(this, cursor.getInt(ScoresViewAdapter.COL_HOME_GOALS),
                     cursor.getInt(ScoresViewAdapter.COL_AWAY_GOALS));
 
             // Perform this loop procedure for each widget that belongs to this provider
@@ -97,9 +97,9 @@ public class FootballWidgetProvider extends AppWidgetProvider {
 
                 // Update the view info
                 remoteViews.setImageViewResource(R.id.widget_home_image,
-                        Utilies.getTeamCrestByTeamName(home));
+                        Utilies.getTeamCrestByTeamName(this, home));
                 remoteViews.setImageViewResource(R.id.widget_away_image,
-                        Utilies.getTeamCrestByTeamName(away));
+                        Utilies.getTeamCrestByTeamName(this, away));
                 remoteViews.setTextViewText(R.id.widget_home_text, home);
                 remoteViews.setTextViewText(R.id.widget_away_text, away);
                 remoteViews.setTextViewText(R.id.widget_score, score);
